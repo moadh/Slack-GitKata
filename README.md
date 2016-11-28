@@ -51,7 +51,7 @@ git checkout -b weather-api # create a feature branch called "weather-api"
 git push origin weather-api
 ```
 
-Notice the graph in SourceTree the develop branch, master and weather-api still share the same HEAD
+Notice that in the SourceTree graph, the develop branch, master and weather-api still share the same HEAD
 
 
 3. On develop modify : 
