@@ -5,7 +5,7 @@ The purpose of this kata is to learn some of the good and effective habits for s
 
 ##Introduction
 
-This kata contains 2 workflows 
+This kata will focus on 2 main workflows 
 
 * Resetting, Checking Out, and Reverting operations
 * Merge and Rebase
@@ -25,7 +25,7 @@ we may later include some quote of the day or other services to animate the chan
 
 ##Instructions
 
-1. Clone the repo and navigate into the directory in your terminal.
+#### Clone the repo and navigate into the directory in your terminal.
 
 ```
 git clone https://github.com/moadh/Slack-GitKata.git
@@ -45,7 +45,7 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
 ``` 
 
-2. Creating a new feature branch 
+#### Creating a new feature branch 
 
 ```
 git pull --rebase # ensure we are up-to-date
@@ -54,7 +54,7 @@ git checkout -b weather-api # create a feature branch called "weather-api"
 
 Notice that in the SourceTree graph, the develop branch, master and weather-api still share the same HEAD.
 
-2.1 Getting the Location from a Slack message
+#### Getting the Location from a Slack message
 * Implement _setLocation Method : if "paris" => Paris, France and the same for florida, tunis and madrid
 * Commit locally
 * Git status
@@ -70,7 +70,7 @@ Shit!! we created a branch from master that's not good, we should instead branch
 * Apply the stash
 * Commit locally
 
-2.2 Run and test the app
+#### Run and test the app
 ```
 node index.js
 ```
@@ -79,7 +79,7 @@ node index.js
 * hit : what's the weather like in madrid ?
 
 
-2.3 Delete "inadvertently" the file util.js
+#### Delete "inadvertently" the file util.js
 * Delete util.js and add some modification to the author section of the readme file and then :
 ```
  git commit -a -m "update README"
@@ -146,7 +146,7 @@ git push origin
 git status
 ```
 
-3. On develop modify :
+#### On develop modify :
 
 * In the commands.json file add these aliases : "weather", "how-cold-is-it", "Hi", "morning" in the alias array 
 of the weather property. [user-1]
@@ -171,7 +171,7 @@ git push origin
 git status
 ```
 
-4. On weather-api modify the weather.js bot implementation
+#### On weather-api modify the weather.js bot implementation
 
 * Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
 * Implement the _getRandomDunno function to return funny message for all freakish questions and change the methods orders [user-4]
@@ -182,7 +182,7 @@ git status
 * After resolving these conflicts, run the app to test it on the Slack Channel
 
 
-5. On develop Modify the readme adding a comment section
+#### On develop Modify the readme adding a comment section
 
 * At least three users need to add their comments on this Kata. 
  
