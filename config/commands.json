@@ -1,0 +1,16 @@
+{
+	"help": {
+		"alias": [ "halp" ],
+		"endpoint": "#",
+		"help": "help [command](optional)",
+		"description": "To get help on all supported commands, or a specified command"
+	},
+	
+    "weather": {
+        "alias": [ "weather", "how-cold-is-it", "Hi", "morning" ],
+        "help": "hi-rainman how cold it is in [City,Country](default to Paris,France)?",
+        "description": "Want to know just how cold it is?",
+		"endpoint": "https://howcoldisit.com/api/1/weather.json?location={CityCountry}"
+    }
+
+}
