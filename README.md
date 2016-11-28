@@ -53,13 +53,12 @@ git push origin weather-api
 
 Notice that in the SourceTree graph, the develop branch, master and weather-api still share the same HEAD.
 
-2.1 Getting the Location
-* Implement _setLocation Method
+2.1 Getting the Location from a Slack message
+* Implement _setLocation Method : if "paris" => Paris, France and the same for florida, tunis and madrid
 * Commit locally
+* Git status
+Shit!! We created a branch from master that's not good, we should instead branch from dev
 
-Notice the graph in SourceTree the develop branch, master and weather-api still share the same HEAD
-
-We created a branch from master that's not good, we should instead branch from dev
 * Reset the last commit (Mixed)
 * Stash the modification
 * Checkout develop
@@ -74,14 +73,14 @@ We created a branch from master that's not good, we should instead branch from d
 * the README file add Authors paragraph [user-2]
 * stage modification (git add --all)
 * commit & push
-
+Notice that the develop branch diverged from weather-api, maybe it's time to merge ?
 
 4. On weather-api modify the weather.js bot implementation : 
 * Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
 * Post the result into the channel [user-4]
 * Commit & push [user-3]
 * Run the app to test on the Slack Channel
-Notice that the develop branch diverged from weather-api, maybe it's time to merge ?
+
 * 
 
 
