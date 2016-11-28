@@ -69,8 +69,6 @@ We created a branch from master that's not good, we should instead branch from d
 * Commit & Push
 
 
-
-
 3. On develop modify : 
 * the commands.json file to remove the non necessary alias "weather" [user-1]
 * the README file add Authors paragraph [user-2]
