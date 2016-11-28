@@ -60,4 +60,13 @@ Notice that in the SourceTree graph, the develop branch, master and weather-api 
 * stage modification (git add --all)
 * commit & push
 
-Notice that the develop branch diverged from weather-api
+
+4. On weather-api modify the weather.js bot implementation : 
+* Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
+* Post the result into the channel [user-4]
+* Commit & push [user-3]
+* Run the app to test on the Slack Channel
+Notice that the develop branch diverged from weather-api, maybe it's time to merge ?
+* 
+
+
