@@ -26,7 +26,23 @@ we may later include some quote of the day or other services to animate the chan
 ##Instructions
 
 1. Clone the repo and navigate into the directory in your terminal.
+Example:
+```
+git clone https://github.com/moadh/Slack-GitKata.git
+Cloning into 'Slack-GitKata'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+Checking connectivity... done.
+```
 
-* git clone https://github.com/moadh/Slack-GitKata.git
-* cd Slack-GitKata
-* git status
+Example:
+```
+cd Slack-GitKata
+git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+```
+
