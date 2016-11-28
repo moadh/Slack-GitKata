@@ -94,6 +94,5 @@ Notice that the develop branch diverged from weather-api, maybe it's time to mer
 * Commit & push [user-3]
 * Run the app to test on the Slack Channel
 
-* 
 
 
