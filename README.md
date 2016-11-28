@@ -50,3 +50,14 @@ git pull --rebase # ensure we are up-to-date
 git checkout -b weather-api # create a feature branch called "weather-api"
 git push origin weather-api
 ```
+
+Notice the graph in SourceTree the develop branch, master and weather-api still share the same HEAD
+
+
+3. On develop modify : 
+* the commands.json file to remove the non necessary alias "weather" [user-1]
+* the README file add Authors paragraph [user-2]
+* stage modification (git add --all)
+* commit & push
+
+Notice that the develop branch diverged from weather-api
