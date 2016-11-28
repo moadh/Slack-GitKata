@@ -60,6 +60,7 @@ Notice that in the SourceTree graph, the develop branch, master and weather-api 
 
 Shit!! we created a branch from master that's not good, we should instead branch from dev
 
+
 * Reset the last commit (Mixed)
 * Stash the modification
 * Checkout develop
@@ -69,9 +70,20 @@ Shit!! we created a branch from master that's not good, we should instead branch
 * Commit locally
 
 
-3. On develop modify : 
-* the commands.json file to remove the non necessary alias "weather" [user-1]
-* the README file add Authors paragraph [user-2]
+3. On develop modify :
+
+* In the commands.json file add these aliases : "weather", "how-cold-is-it", "Hi", "morning" in the alias array 
+of the weather property. [user-1]
+```
+git commit -a -m "Add bot command aliases"
+```
+* Now we will remove the non necessary alias "weather". [user-1]
+```
+git commit --amend
+```
+
+
+* IN the README file add Authors paragraph [user-2]
 * stage modification (git add --all)
 * commit & push
 Notice that the develop branch diverged from weather-api, maybe it's time to merge ?
