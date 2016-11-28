@@ -68,9 +68,19 @@ Shit!! we created a branch from master that's not good, we should instead branch
 * Apply the stash
 * Commit locally
 
-2.2 Run and test the app :
+2.2 Run and test the app
 ```
-git commit -a -m "Add bot command aliases"
+node index.js
+```
+* go to the https://kmplusteam.slack.com/messages/random/
+* hit : what's the weather like in paris ?
+* hit : what's the weather like in madrid ?
+
+
+2.3 Delete inadvertently the file util.js
+```
+git status
+git 
 ```
 
 3. On develop modify :
