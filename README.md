@@ -77,15 +77,16 @@ node index.js
 * hit : what's the weather like in madrid ?
 
 
-2.3 Delete inadvertently the file util.js
+2.3 Delete "inadvertently" the file util.js
+* Delete util.js and add some modification to the author section of the readme file and then :
 ```
- git status
- git commit -a -m "remove unused file"
+ git commit -a -m "update README"
  git push origin
 ```
-* We will add some modification to the author section in the readme and push the change
+
+* We will add some other modification to the author section in the readme and push the change
 ```
-  git commit -a -m "remove unused file"
+  git commit -a -m "update README"
   git status
 ```
 
@@ -98,10 +99,50 @@ node index.js
   Author: Ben Sassi <Mouadh.BenSassi@Kantarmedia.com>
   Date:   Mon Nov 28 18:15:18 2016 +0100
 
-  git statgit revert us
+  git revert 72ebb803
+  error: could not revert 72ebb80... update README
+  hint: after resolving the conflicts, mark the corrected paths
+  hint: with 'git add <paths>' or 'git rm <paths>'
+  hint: and commit the result with 'git commit'
 ```
 
+* We should have a conflict on the README file
+* use source tree to resolve it using theirs version or an external tool like TortoiseMerge.
+```
+Mouadh.bensassi@KNPIRD0073 MINGW64 /d/work/stuff/Slack/Slack-GitKata (develop|REVERTING)
+$ git status
+On branch develop
+Your branch is ahead of 'origin/develop' by 8 commits.
+  (use "git push" to publish your local commits)
+You are currently reverting commit 72ebb80.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   util.js
+
+
+```
+
+* Finally a simple instruction and we had successfully reverted the commit, notice that the branch is still in reverting state.
+```
+$ git revert --continue
+[develop cb6246b] Revert "remove unused file"
+ 1 file changed, 23 insertions(+)
+ create mode 100644 util.js
+```
+
+* Run and test the app
+```
+node index.js
+```
+* If it's still working share your work
+```
+git push origin
+git status
+```
 
 
 3. On develop modify :
@@ -116,6 +157,7 @@ git commit -a -m "Add bot command aliases"
 git commit --amend
 git push origin
 ```
+
 * IN the README file add Authors paragraph [user-2]
 * stage modification
 ```
@@ -128,13 +170,23 @@ git push origin
 git status
 ```
 
-Notice that the develop branch diverged from weather-api branch, maybe it's time to merge ?
-
 4. On weather-api modify the weather.js bot implementation : 
 * Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
-* Post the result into the channel [user-4]
+* Implement the _getRandomDunno function to return funny message for all freakish questions and change the methods orders [user-4]
+* Post the result into the channel and change the methods orders [user-5]
+* Each time you commit add a comment in the comment section of the readme :)
 * Commit & push [user-3]
-* Run the app to test on the Slack Channel
+* We will probably run into some rebase conflict
+* After resolving these conflicts, run the app to test it on the Slack Channel
+
+5. On develop Modify the readme adding a comment section
+* At least three users need to add their comments on this Kata. 
+ 
+
+Notice that the develop branch diverged from weather-api branch, maybe it's time to merge ? hi hi
+At this stage a merge should be funny !!
+
+
 
 
 
