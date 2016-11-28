@@ -57,7 +57,8 @@ Notice that in the SourceTree graph, the develop branch, master and weather-api 
 * Implement _setLocation Method : if "paris" => Paris, France and the same for florida, tunis and madrid
 * Commit locally
 * Git status
-Shit!! We created a branch from master that's not good, we should instead branch from dev
+
+Shit!! we created a branch from master that's not good, we should instead branch from dev
 
 * Reset the last commit (Mixed)
 * Stash the modification
@@ -65,7 +66,7 @@ Shit!! We created a branch from master that's not good, we should instead branch
 * Delete weather-api branch
 * branch using git-flow a new weather-api
 * Apply the stash
-* Commit & Push
+* Commit locally
 
 
 3. On develop modify : 
