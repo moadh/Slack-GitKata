@@ -79,9 +79,20 @@ node index.js
 
 2.3 Delete inadvertently the file util.js
 ```
-git status
-git 
+ git status
+ git commit -a -m "remove unused file"
+ git push origin
 ```
+* We will add some modification to the author section in the readme and push the change
+```
+  git commit -a -m "remove unused file"
+  git status
+```
+
+* Hopefully someone will notice that the app does not work because of the deleted file
+ unfortunately the changes are already on the origin so we can't reset the branch.
+* In which case we will revert the commit  
+
 
 3. On develop modify :
 
