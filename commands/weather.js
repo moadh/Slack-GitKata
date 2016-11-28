@@ -5,8 +5,8 @@ module.exports = function (param) {
 	var	channel		= param.channel,
 		endpoint	= param.commandConfig.endpoint,
     	dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
-		
-	
+
+
 
 	var _setLocation = function (url) {
 		var endpoint = url;
@@ -17,7 +17,7 @@ module.exports = function (param) {
 		*/
         if(param.args.some(elem => elem.toLowerCase().indexOf("paris") !== -1 ))
             endpoint = url.replace('{CityCountry}', "Paris,France");
-			
+
 
 		return endpoint
 	};
@@ -31,8 +31,9 @@ module.exports = function (param) {
 
     //Calling the Api and post the result
     var _callWeatherApi = function (postMessage) {
-        info = [];
-        if (endpoint.indexOf('{CityCountry}') === -1) {
+        var info = [];
+
+        /*if (endpoint.indexOf('{CityCountry}') === -1) {
             request(endpoint, function (err, response, body) {
 
                 if (!err && response.statusCode === 200) {
@@ -46,11 +47,14 @@ module.exports = function (param) {
                 else {
                     info.push(_getRandomDunno()); // arbitrary dunno!
                 }
+
             });
         }
         else {
             info.push(_getRandomDunno()); // arbitrary dunno!
-        }
+        }*/
+
+        info.push("Sorry not yet implemented");
         _postMessage(info.join('\n'));
     };
 

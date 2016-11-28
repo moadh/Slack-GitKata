@@ -44,11 +44,10 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
 ``` 
 
-2. Creating feature branch and pushing
+2. Creating a new feature branch 
 ```
 git pull --rebase # ensure we are up-to-date
 git checkout -b weather-api # create a feature branch called "weather-api"
-git push origin weather-api
 ```
 
 Notice that in the SourceTree graph, the develop branch, master and weather-api still share the same HEAD.
@@ -69,6 +68,10 @@ Shit!! we created a branch from master that's not good, we should instead branch
 * Apply the stash
 * Commit locally
 
+2.2 Run and test the app :
+```
+git commit -a -m "Add bot command aliases"
+```
 
 3. On develop modify :
 
@@ -77,16 +80,24 @@ of the weather property. [user-1]
 ```
 git commit -a -m "Add bot command aliases"
 ```
-* Now we will remove the non necessary alias "weather". [user-1]
+* Now we will remove the non necessary alias "weather", because we did not push the change yet we can do this without creating a new commit. [user-1]
 ```
 git commit --amend
+git push origin
+```
+* IN the README file add Authors paragraph [user-2]
+* stage modification
+```
+git add --all
+```
+* commit & push
+```
+git commit -m "Adding authors seection to readme file"
+git push origin
+git status
 ```
 
-
-* IN the README file add Authors paragraph [user-2]
-* stage modification (git add --all)
-* commit & push
-Notice that the develop branch diverged from weather-api, maybe it's time to merge ?
+Notice that the develop branch diverged from weather-api branch, maybe it's time to merge ?
 
 4. On weather-api modify the weather.js bot implementation : 
 * Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
