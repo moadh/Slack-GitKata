@@ -1,6 +1,6 @@
 var slackTerminal = require('slack-terminalize');
 
-slackTerminal.init('xoxb-107006198704-lUBE2xYU082sLk3fTWzSBy0f', {
+slackTerminal.init('xoxb-109593544883-OS19E9ADRguPfnP0Wg4hjRhb', {
     // slack rtm client options here
     // more info at: https://github.com/slackhq/node-slack-client/blob/master/lib/clients/rtm/client.js
 }, {

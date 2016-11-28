@@ -3,68 +3,68 @@ var request = require('request'),
 
 module.exports = function (param) {
 	var	channel		= param.channel,
-		endpoint	= param.commandConfig.endpoint;
-		
-	
+		endpoint	= param.commandConfig.endpoint,
+    	dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
+
+
 
 	var _setLocation = function (url) {
 		var endpoint = url;
 
+		/*
+		TODO We need to modify the endpoint url and replace the tag {CityCountry} with the equivalent City,Country based on the param.args values
+		The first found args having a city value like paris, tunis, florida, madrid will determine what we will return.
+		*/
+        if(param.args.some(elem => elem.toLowerCase().indexOf("paris") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Paris,France");
 
-		param.args.forEach(argument =>
-		{
 
-			if (argument.toLowerCase().indexOf("paris") !== -1) 
-			{
-				endpoint = url.replace('{CityCountry}', "Paris,France");
-			}
-
-			if (argument.toLowerCase().indexOf("tunis") !== -1) 
-			{
-				endpoint = url.replace('{CityCountry}', "Tunis,Tunisia");
-			}
-
-			if (argument.toLowerCase().indexOf("puteau") !== -1) 
-			{
-				endpoint = url.replace('{CityCountry}', "Puteaux,France");
-			}
-
-			if (argument.toLowerCase().indexOf("saint augustine") !== -1 || argument.toLowerCase().indexOf("florid") !== -1) 
-			{
-				endpoint = url.replace('{CityCountry}', "Saint Augustine,FL");
-			}
-			
-			
-		})
 		return endpoint
 	};
 
+
 	var _getRandomDunno = function () {
-		var dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!")
-		return dunnos[Math.floor(Math.random()*dunnos.length)]
+
+        return dunnos[0];
+        //return dunnos[Math.floor(Math.random()*dunnos.length)]
 	};
-	
+
+
+    //Calling the Api and post the result
+    var _callWeatherApi = function (postMessage) {
+        var info = [];
+
+        /*if (endpoint.indexOf('{CityCountry}') === -1) {
+            request(endpoint, function (err, response, body) {
+
+                if (!err && response.statusCode === 200) {
+                    body = JSON.parse(body);
+
+                    info.push('Location: ' + body.location);
+                    info.push(body.description + " " + body.condition);
+                    _postMessage(info.join('\n'));
+                    return;
+                }
+                else {
+                    info.push(_getRandomDunno()); // arbitrary dunno!
+                }
+
+            });
+        }
+        else {
+            info.push(_getRandomDunno()); // arbitrary dunno!
+        }*/
+
+        info.push("Sorry not yet implemented");
+        _postMessage(info.join('\n'));
+    };
+
+    var _postMessage = function (message) {
+        console.log("final " + message);
+        util.postMessage(channel, message);
+    };
+
 	endpoint	= _setLocation(param.commandConfig.endpoint);
-	
-	if (endpoint.indexOf('{CityCountry}') === -1) {
-		request(endpoint, function (err, response, body) {
-			var info = [];
-
-			if (!err && response.statusCode === 200) {
-				body = JSON.parse(body);
-
-				info.push('Location: ' + body.location);
-				info.push(body.description + " " + body.condition);
-			}
-			else {
-				info.push(_getRandomDunno()); // arbitrary dunno!
-			}
-
-			util.postMessage(channel, info.join('\n'));
-		});
-	}
-	else {
-		util.postMessage(channel, _getRandomDunno());// arbitrary dunno!
-	}
+	_callWeatherApi();
 
 };
