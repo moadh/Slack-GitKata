@@ -44,3 +44,9 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
 ``` 
 
+2. Creating feature branch and pushing
+```
+git pull --rebase # ensure we are up-to-date
+git checkout -b weather-api # create a feature branch called "weather-api"
+git push origin weather-api
+```
