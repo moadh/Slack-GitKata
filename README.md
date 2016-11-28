@@ -91,7 +91,17 @@ node index.js
 
 * Hopefully someone will notice that the app does not work because of the deleted file
  unfortunately the changes are already on the origin so we can't reset the branch.
-* In which case we will revert the commit  
+* In which case we will need to locate and revert the commit
+```
+  git log -n 1 -- util.js
+  commit 72ebb8035fee09aeabd86b360f31503c346f7db2
+  Author: Ben Sassi <Mouadh.BenSassi@Kantarmedia.com>
+  Date:   Mon Nov 28 18:15:18 2016 +0100
+
+  git statgit revert us
+```
+
+
 
 
 3. On develop modify :
