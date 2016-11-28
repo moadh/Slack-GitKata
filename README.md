@@ -170,7 +170,8 @@ git push origin
 git status
 ```
 
-4. On weather-api modify the weather.js bot implementation : 
+4. On weather-api modify the weather.js bot implementation
+
 * Implement the request GET https://howcoldisit.com/api/1/weather.json?location=={City},{Country} [user-3]
 * Implement the _getRandomDunno function to return funny message for all freakish questions and change the methods orders [user-4]
 * Post the result into the channel and change the methods orders [user-5]
