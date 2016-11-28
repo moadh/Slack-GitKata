@@ -52,6 +52,18 @@ git push origin weather-api
 ```
 
 Notice that in the SourceTree graph, the develop branch, master and weather-api still share the same HEAD
+2.1 Getting the Location
+* Implement _setLocation Method
+* Commit locally
+We created a branch from master that's not good, we should instead branch from dev
+* Reset the last commit (Mixed)
+* Stash the modification
+* Checkout develop
+* Delete weather-api branch
+* branch using git-flow a new weather-api
+* Apply the stash
+* Commit & Push
+Notice the graph in SourceTree the develop branch, master and weather-api still share the same HEAD
 
 
 3. On develop modify : 
