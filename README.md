@@ -26,6 +26,7 @@ we may later include some quote of the day or other services to animate the chan
 ##Instructions
 
 1. Clone the repo and navigate into the directory in your terminal.
+
 ```
 git clone https://github.com/moadh/Slack-GitKata.git
 Cloning into 'Slack-GitKata'...
@@ -45,6 +46,7 @@ nothing to commit, working tree clean
 ``` 
 
 2. Creating a new feature branch 
+
 ```
 git pull --rebase # ensure we are up-to-date
 git checkout -b weather-api # create a feature branch called "weather-api"
@@ -144,7 +146,6 @@ git push origin
 git status
 ```
 
-
 3. On develop modify :
 
 * In the commands.json file add these aliases : "weather", "how-cold-is-it", "Hi", "morning" in the alias array 
@@ -180,7 +181,9 @@ git status
 * We will probably run into some rebase conflict
 * After resolving these conflicts, run the app to test it on the Slack Channel
 
+
 5. On develop Modify the readme adding a comment section
+
 * At least three users need to add their comments on this Kata. 
  
 
