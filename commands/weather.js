@@ -39,13 +39,19 @@ module.exports = function (param) {
 		return endpoint
 	};
 
+	/*
 	var _getRandomDunno = function () {
 		var dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!")
 		return dunnos[Math.floor(Math.random()*dunnos.length)]
 	};
-	
+	*/
+
+
 	endpoint	= _setLocation(param.commandConfig.endpoint);
-	
+    util.postMessage(channel, "Sorry, it's not yet implemented !!");// not yet implemented mesage
+
+	//Calling the Api and post the result
+	/*
 	if (endpoint.indexOf('{CityCountry}') === -1) {
 		request(endpoint, function (err, response, body) {
 			var info = [];
@@ -66,5 +72,5 @@ module.exports = function (param) {
 	else {
 		util.postMessage(channel, _getRandomDunno());// arbitrary dunno!
 	}
-
+	*/
 };
