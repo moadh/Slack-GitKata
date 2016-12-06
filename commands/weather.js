@@ -17,11 +17,13 @@ module.exports = function (param) {
 		*/
         if(param.args.some(elem => elem.toLowerCase().indexOf("paris") !== -1 ))
             endpoint = url.replace('{CityCountry}', "Paris,France");
-        if(param.args.some(elem => elem.toLowerCase().indexOf("Tunis") !== -1 ))
-            endpoint = url.replace('{CityCountry}', "Tunis,Tunisie");
+        if(param.args.some(elem => elem.toLowerCase().indexOf("tunis") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Tunis,Tunisia");
 
-        if(param.args.some(elem => elem.toLowerCase().indexOf("Orlando") !== -1 ))
-            endpoint = url.replace('{CityCountry}', "Orlando,Florida");
+        if(param.args.some(elem => elem.toLowerCase().indexOf("orlando") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Saint Augustine,FL");
+
+
             
 		return endpoint
 	};
