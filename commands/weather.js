@@ -59,8 +59,6 @@ module.exports = function (param) {
         else {
             info.push(_getRandomDunno()); // arbitrary dunno!
         }
-
-        info.push("Sorry not yet implemented");
         _postMessage(info.join('\n'));
     };
 
