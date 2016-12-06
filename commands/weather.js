@@ -17,8 +17,12 @@ module.exports = function (param) {
 		*/
         if(param.args.some(elem => elem.toLowerCase().indexOf("paris") !== -1 ))
             endpoint = url.replace('{CityCountry}', "Paris,France");
+        if(param.args.some(elem => elem.toLowerCase().indexOf("Tunis") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Tunis,Tunisie");
 
-
+        if(param.args.some(elem => elem.toLowerCase().indexOf("Orlando") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Orlando,Florida");
+            
 		return endpoint
 	};
 
