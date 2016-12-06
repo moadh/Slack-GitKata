@@ -4,7 +4,7 @@ var request = require('request'),
 module.exports = function (param) {
 	var	channel		= param.channel,
 		endpoint	= param.commandConfig.endpoint,
-    	dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
+    	dunnos		= Array("Sayeb Salah!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
 
 
 
