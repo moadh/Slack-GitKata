@@ -29,8 +29,7 @@ module.exports = function (param) {
 
 	var _getRandomDunno = function () {
 
-        return dunnos[0];
-        //return dunnos[Math.floor(Math.random()*dunnos.length)]
+        return dunnos[Math.floor(Math.random()*dunnos.length)]
 	};
 
 
