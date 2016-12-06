@@ -38,7 +38,7 @@ module.exports = function (param) {
     var _callWeatherApi = function (postMessage) {
         var info = [];
 
-        /*if (endpoint.indexOf('{CityCountry}') === -1) {
+        if (endpoint.indexOf('{CityCountry}') === -1) {
             request(endpoint, function (err, response, body) {
 
                 if (!err && response.statusCode === 200) {
@@ -57,7 +57,7 @@ module.exports = function (param) {
         }
         else {
             info.push(_getRandomDunno()); // arbitrary dunno!
-        }*/
+        }
 
         info.push("Sorry not yet implemented");
         _postMessage(info.join('\n'));
