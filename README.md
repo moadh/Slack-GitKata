@@ -4,6 +4,12 @@ Going through some git workflow while creating a funny Slack Bot.
 The purpose of this kata is to learn some of the good and effective habits for source control while using git. 
 
 ##Introduction
+##Authors
+
+Kamel Ben Hamida
+
+
+## NOTRE CHEF K.D PORTE UNE PERUQUE
 
 This kata will focus on 2 main workflows 
 

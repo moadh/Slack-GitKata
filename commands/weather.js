@@ -4,7 +4,7 @@ var request = require('request'),
 module.exports = function (param) {
 	var	channel		= param.channel,
 		endpoint	= param.commandConfig.endpoint,
-    	dunnos		= Array("dunno!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
+    	dunnos		= Array("Sayeb Salah!", "no idea!", "no fucking idea!", "Sorry, we are missing these data!", "wtf !!!!!", "euhhhhh!");
 
 
 
@@ -17,16 +17,19 @@ module.exports = function (param) {
 		*/
         if(param.args.some(elem => elem.toLowerCase().indexOf("paris") !== -1 ))
             endpoint = url.replace('{CityCountry}', "Paris,France");
+        if(param.args.some(elem => elem.toLowerCase().indexOf("Tunis") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Tunis,Tunisie");
 
-
+        if(param.args.some(elem => elem.toLowerCase().indexOf("Orlando") !== -1 ))
+            endpoint = url.replace('{CityCountry}', "Orlando,Florida");
+            
 		return endpoint
 	};
 
 
 	var _getRandomDunno = function () {
 
-        return dunnos[0];
-        //return dunnos[Math.floor(Math.random()*dunnos.length)]
+        return dunnos[Math.floor(Math.random()*dunnos.length)]
 	};
 
 
@@ -34,7 +37,7 @@ module.exports = function (param) {
     var _callWeatherApi = function (postMessage) {
         var info = [];
 
-        /*if (endpoint.indexOf('{CityCountry}') === -1) {
+        if (endpoint.indexOf('{CityCountry}') === -1) {
             request(endpoint, function (err, response, body) {
 
                 if (!err && response.statusCode === 200) {
@@ -53,7 +56,7 @@ module.exports = function (param) {
         }
         else {
             info.push(_getRandomDunno()); // arbitrary dunno!
-        }*/
+        }
 
         info.push("Sorry not yet implemented");
         _postMessage(info.join('\n'));
