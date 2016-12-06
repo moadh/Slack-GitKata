@@ -8,6 +8,9 @@ The purpose of this kata is to learn some of the good and effective habits for s
 
 Kamel Ben Hamida
 
+
+## NOTRE CHEF K.D PORTE UNE PERUQUE
+
 This kata will focus on 2 main workflows 
 
 * Resetting, Checking Out, and Reverting operations
